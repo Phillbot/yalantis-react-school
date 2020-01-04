@@ -65,10 +65,17 @@ class Home extends Component<IHomeProps, IHomeState> {
           ? Object.values(userList)[this.props.row]
           : false;
 
+      const slices: any = {};
+
+      for (let i = 0; i < monthAndCount.length; i++) {
+        const obj = { offset: 0.04 };
+        slices[i] = obj;
+      }
+
       return (
         <div className="home container-fluid">
           <Helmet>
-            <title>Yalantis React School </title>
+            <title>Yalantis React School</title>
           </Helmet>
 
           <div className="row">
@@ -95,17 +102,20 @@ class Home extends Component<IHomeProps, IHomeState> {
                     bold: true,
                     color: "#fff"
                   },
+                  pieSliceBorderColor: "green",
                   legend: "none",
                   tooltip: {
                     text: "both"
                   },
                   colors,
+                  donutSolid: true,
                   chartArea: {
                     left: 0,
                     top: 50,
                     width: "100%",
                     height: "100%"
-                  }
+                  },
+                  slices
                 }}
                 chartEvents={[
                   {
@@ -118,6 +128,8 @@ class Home extends Component<IHomeProps, IHomeState> {
                         (e: any) => {
                           const { row } = e;
                           this.props.getRowToDispatch(row);
+
+                          console.log(e);
                         }
                       );
                       google.visualization.events.addListener(
@@ -147,7 +159,7 @@ class Home extends Component<IHomeProps, IHomeState> {
                     <tr>
                       <th>First Name</th>
                       <th>Last Name</th>
-                      <th>Birsday</th>
+                      <th>Birthday</th>
                     </tr>
                   </thead>
 
