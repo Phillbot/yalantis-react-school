@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/yalantis-react-school/static/css/main.cdc958fd.chunk.css",
+    "main.css": "/yalantis-react-school/static/css/main.347a245b.chunk.css",
     "main.js": "/yalantis-react-school/static/js/main.e4bf6fce.chunk.js",
     "main.js.map": "/yalantis-react-school/static/js/main.e4bf6fce.chunk.js.map",
     "runtime-main.js": "/yalantis-react-school/static/js/runtime-main.0673064b.js",
@@ -9,17 +9,17 @@
     "static/js/2.d998fbc0.chunk.js": "/yalantis-react-school/static/js/2.d998fbc0.chunk.js",
     "static/js/2.d998fbc0.chunk.js.map": "/yalantis-react-school/static/js/2.d998fbc0.chunk.js.map",
     "index.html": "/yalantis-react-school/index.html",
-    "precache-manifest.8c65baac2fb17886416d445a64a6ee52.js": "/yalantis-react-school/precache-manifest.8c65baac2fb17886416d445a64a6ee52.js",
+    "precache-manifest.517c93bb1429a0cccbd64345154deb52.js": "/yalantis-react-school/precache-manifest.517c93bb1429a0cccbd64345154deb52.js",
     "service-worker.js": "/yalantis-react-school/service-worker.js",
     "static/css/2.e315d21c.chunk.css.map": "/yalantis-react-school/static/css/2.e315d21c.chunk.css.map",
-    "static/css/main.cdc958fd.chunk.css.map": "/yalantis-react-school/static/css/main.cdc958fd.chunk.css.map",
+    "static/css/main.347a245b.chunk.css.map": "/yalantis-react-school/static/css/main.347a245b.chunk.css.map",
     "static/js/2.d998fbc0.chunk.js.LICENSE": "/yalantis-react-school/static/js/2.d998fbc0.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.0673064b.js",
     "static/css/2.e315d21c.chunk.css",
     "static/js/2.d998fbc0.chunk.js",
-    "static/css/main.cdc958fd.chunk.css",
+    "static/css/main.347a245b.chunk.css",
     "static/js/main.e4bf6fce.chunk.js"
   ]
 }
