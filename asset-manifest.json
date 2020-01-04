@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/yalantis-react-school/static/css/main.b5ef0568.chunk.css",
-    "main.js": "/yalantis-react-school/static/js/main.6fc525fc.chunk.js",
-    "main.js.map": "/yalantis-react-school/static/js/main.6fc525fc.chunk.js.map",
+    "main.css": "/yalantis-react-school/static/css/main.2c3630fb.chunk.css",
+    "main.js": "/yalantis-react-school/static/js/main.052a6bcb.chunk.js",
+    "main.js.map": "/yalantis-react-school/static/js/main.052a6bcb.chunk.js.map",
     "runtime-main.js": "/yalantis-react-school/static/js/runtime-main.0673064b.js",
     "runtime-main.js.map": "/yalantis-react-school/static/js/runtime-main.0673064b.js.map",
     "static/css/2.e315d21c.chunk.css": "/yalantis-react-school/static/css/2.e315d21c.chunk.css",
-    "static/js/2.096158da.chunk.js": "/yalantis-react-school/static/js/2.096158da.chunk.js",
-    "static/js/2.096158da.chunk.js.map": "/yalantis-react-school/static/js/2.096158da.chunk.js.map",
+    "static/js/2.d998fbc0.chunk.js": "/yalantis-react-school/static/js/2.d998fbc0.chunk.js",
+    "static/js/2.d998fbc0.chunk.js.map": "/yalantis-react-school/static/js/2.d998fbc0.chunk.js.map",
     "index.html": "/yalantis-react-school/index.html",
-    "precache-manifest.d47178b45e3e224b1fde78ddc20d6bc5.js": "/yalantis-react-school/precache-manifest.d47178b45e3e224b1fde78ddc20d6bc5.js",
+    "precache-manifest.561891e34498a097e06b630708544d6a.js": "/yalantis-react-school/precache-manifest.561891e34498a097e06b630708544d6a.js",
     "service-worker.js": "/yalantis-react-school/service-worker.js",
     "static/css/2.e315d21c.chunk.css.map": "/yalantis-react-school/static/css/2.e315d21c.chunk.css.map",
-    "static/css/main.b5ef0568.chunk.css.map": "/yalantis-react-school/static/css/main.b5ef0568.chunk.css.map",
-    "static/js/2.096158da.chunk.js.LICENSE": "/yalantis-react-school/static/js/2.096158da.chunk.js.LICENSE"
+    "static/css/main.2c3630fb.chunk.css.map": "/yalantis-react-school/static/css/main.2c3630fb.chunk.css.map",
+    "static/js/2.d998fbc0.chunk.js.LICENSE": "/yalantis-react-school/static/js/2.d998fbc0.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.0673064b.js",
     "static/css/2.e315d21c.chunk.css",
-    "static/js/2.096158da.chunk.js",
-    "static/css/main.b5ef0568.chunk.css",
-    "static/js/main.6fc525fc.chunk.js"
+    "static/js/2.d998fbc0.chunk.js",
+    "static/css/main.2c3630fb.chunk.css",
+    "static/js/main.052a6bcb.chunk.js"
   ]
 }
