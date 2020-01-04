@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f05258d3f587000956a81b8363aab37d",
+    "revision": "f63796d69a6431d2eaa07ff9eac95ba9",
     "url": "/yalantis-react-school/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yalantis-react-school/static/css/2.e315d21c.chunk.css"
   },
   {
-    "revision": "fd0711ebc0da226478ba",
+    "revision": "134afe4a4b138c86c54e",
     "url": "/yalantis-react-school/static/css/main.70bcf689.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yalantis-react-school/static/js/2.d998fbc0.chunk.js.LICENSE"
   },
   {
-    "revision": "fd0711ebc0da226478ba",
-    "url": "/yalantis-react-school/static/js/main.f56262c6.chunk.js"
+    "revision": "134afe4a4b138c86c54e",
+    "url": "/yalantis-react-school/static/js/main.e4bf6fce.chunk.js"
   },
   {
     "revision": "56a26f4e888604122ff2",
