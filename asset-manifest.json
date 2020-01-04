@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/yalantis-react-school/static/css/main.b5ef0568.chunk.css",
-    "main.js": "/yalantis-react-school/static/js/main.070623b4.chunk.js",
-    "main.js.map": "/yalantis-react-school/static/js/main.070623b4.chunk.js.map",
+    "main.js": "/yalantis-react-school/static/js/main.6fc525fc.chunk.js",
+    "main.js.map": "/yalantis-react-school/static/js/main.6fc525fc.chunk.js.map",
     "runtime-main.js": "/yalantis-react-school/static/js/runtime-main.0673064b.js",
     "runtime-main.js.map": "/yalantis-react-school/static/js/runtime-main.0673064b.js.map",
     "static/css/2.e315d21c.chunk.css": "/yalantis-react-school/static/css/2.e315d21c.chunk.css",
     "static/js/2.096158da.chunk.js": "/yalantis-react-school/static/js/2.096158da.chunk.js",
     "static/js/2.096158da.chunk.js.map": "/yalantis-react-school/static/js/2.096158da.chunk.js.map",
     "index.html": "/yalantis-react-school/index.html",
-    "precache-manifest.7058d90665e707e64f8135746600515f.js": "/yalantis-react-school/precache-manifest.7058d90665e707e64f8135746600515f.js",
+    "precache-manifest.d47178b45e3e224b1fde78ddc20d6bc5.js": "/yalantis-react-school/precache-manifest.d47178b45e3e224b1fde78ddc20d6bc5.js",
     "service-worker.js": "/yalantis-react-school/service-worker.js",
     "static/css/2.e315d21c.chunk.css.map": "/yalantis-react-school/static/css/2.e315d21c.chunk.css.map",
     "static/css/main.b5ef0568.chunk.css.map": "/yalantis-react-school/static/css/main.b5ef0568.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.e315d21c.chunk.css",
     "static/js/2.096158da.chunk.js",
     "static/css/main.b5ef0568.chunk.css",
-    "static/js/main.070623b4.chunk.js"
+    "static/js/main.6fc525fc.chunk.js"
   ]
 }
