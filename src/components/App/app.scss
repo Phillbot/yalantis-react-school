@@ -1,62 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@import "../../constants/consts.scss";
 
 html,
 body {
   height: 100%;
   overflow: auto;
-  font-family: "Lato", sans-serif !important;
-}
-
-.table-container-scroll {
-  max-width: 100%;
-  overflow: auto;
-  margin: 1.5rem auto;
-}
-
-.text-link {
-  color: black;
-  &:hover {
-    opacity: 0.95;
-  }
-}
-
-.table-link {
-  color: black;
-  text-decoration: underline;
-  &:hover {
-    opacity: 0.95;
-  }
-}
-
-.text-right {
-  text-align: right;
+  font-family: "Ubuntu", sans-serif;
 }
 
 table {
-  font-size: 0.8rem;
   tr,
   td {
-    padding: 3px 5px !important;
-  }
-
-  th {
-    background: #26a69a;
-    color: white;
-  }
-}
-
-.no-bg-thead {
-  th {
-    background: none;
-    color: white;
-  }
-}
-
-.table-border {
-  tr,
-  td,
-  th {
-    border: 1px solid lightgrey;
+    padding: 3px 5px;
   }
 }
 
@@ -70,4 +25,35 @@ table {
       padding: 1rem;
     }
   }
+}
+
+//Skeletons
+
+.mobile-home-skeleton {
+  display: none;
+}
+
+
+.mobile-chart-home-skeleton {
+  display: none;
+}
+
+@media screen and(max-width:768px){
+
+  .desctop-home-skeleton {
+    display: none;
+  }
+
+  .desctop-chart-home-skeleton {
+    display: none;
+  }
+
+  .mobile-home-skeleton {
+    display: block;
+  }
+
+  .mobile-chart-home-skeleton {
+    display: block;
+  }
+  
 }
