@@ -4,10 +4,10 @@ import Skeleton from "react-loading-skeleton";
 export function SkeletonLoaderChart() {
   return (
     <>
-      <div className="desctop-chart-home-skeleton">
+      <div className="desctop-chart-home-skeleton center">
         <Skeleton count={1} circle={true} height={450} width={450} />
       </div>
-      <div className="mobile-chart-home-skeleton">
+      <div className="mobile-chart-home-skeleton center">
         <Skeleton count={1} circle={true} height={250} width={250} />
       </div>
     </>
