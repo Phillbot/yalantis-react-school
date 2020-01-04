@@ -12,7 +12,6 @@ import { SkeletonLoaderHome, SkeletonLoaderChart } from "../../SkeletonLoader";
 class Home extends Component<IHomeProps, IHomeState> {
   constructor(props: IHomeProps) {
     super(props);
-
     this.state = {
       error: null,
       isLoaded: false,
@@ -27,8 +26,14 @@ class Home extends Component<IHomeProps, IHomeState> {
 
   render() {
     const { error, isLoaded, userList } = this.state;
+
     if (error) {
-      return <div>Ошибка: {error}</div>;
+      return (
+        <div className="container">
+          <h4 className="center mt50 mb50">Произошла ошибка :-(</h4>
+          <p className="center">Попробуйте обновить страницу </p>
+        </div>
+      );
     } else if (!isLoaded) {
       return (
         <div className="container-fluid">
@@ -36,14 +41,18 @@ class Home extends Component<IHomeProps, IHomeState> {
         </div>
       );
     } else {
-      let monthAndCount: any[] = [];
-      let colors: any[] = [];
+      const monthAndCount: any[] = [];
+      const colors: any[] = [];
+      const slices: any = {};
 
       for (let i = 0; i < Object.keys(userList).length; i++) {
         const month = Object.keys(userList)[i];
         const count: any = Object.values(userList)[i];
 
         monthAndCount.push([month.slice(0, 3), count.length]);
+
+        const obj = { offset: 0.04 };
+        slices[i] = obj;
       }
 
       for (let i = 0; i < Object.values(userList).length; i++) {
@@ -64,13 +73,6 @@ class Home extends Component<IHomeProps, IHomeState> {
         this.props.row !== null
           ? Object.values(userList)[this.props.row]
           : false;
-
-      const slices: any = {};
-
-      for (let i = 0; i < monthAndCount.length; i++) {
-        const obj = { offset: 0.04 };
-        slices[i] = obj;
-      }
 
       return (
         <div className="home container-fluid">
@@ -108,7 +110,6 @@ class Home extends Component<IHomeProps, IHomeState> {
                     text: "both"
                   },
                   colors,
-                  donutSolid: true,
                   chartArea: {
                     left: 0,
                     top: 50,
@@ -128,8 +129,6 @@ class Home extends Component<IHomeProps, IHomeState> {
                         (e: any) => {
                           const { row } = e;
                           this.props.getRowToDispatch(row);
-
-                          console.log(e);
                         }
                       );
                       google.visualization.events.addListener(
