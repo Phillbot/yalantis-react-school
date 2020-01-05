@@ -27,11 +27,13 @@ class Home extends Component<IHomeProps, IHomeState> {
   render() {
     const { error, isLoaded, userList } = this.state;
 
+    const { rowFromRedux, getRowToDispatch } = this.props;
+
     if (error) {
       return (
-        <div className="container">
-          <h4 className="center mt50 mb50">Произошла ошибка :-(</h4>
-          <p className="center">Попробуйте обновить страницу </p>
+        <div className="container center">
+          <h4 className="mt50 mb50">Произошла ошибка :-(</h4>
+          <p>Попробуйте обновить страницу</p>
         </div>
       );
     } else if (!isLoaded) {
@@ -41,38 +43,62 @@ class Home extends Component<IHomeProps, IHomeState> {
         </div>
       );
     } else {
-      const monthAndCount: any[] = [];
-      const colors: any[] = [];
+      let monthAndCount: any[] = [];
+      let colors: any[] = [];
+
       const slices: any = {};
 
-      for (let i = 0; i < Object.keys(userList).length; i++) {
-        const month = Object.keys(userList)[i];
-        const count: any = Object.values(userList)[i];
-
-        monthAndCount.push([month.slice(0, 3), count.length]);
-
-        const obj = { offset: 0.04 };
-        slices[i] = obj;
-      }
-
-      for (let i = 0; i < Object.values(userList).length; i++) {
-        const users: any = Object.values(userList)[i];
-
-        if (users.length < 2) {
-          colors.push("#bdbdbd");
-        } else if (users.length > 2 && users.length <= 6) {
-          colors.push("#3f51b5");
-        } else if (users.length > 6 && users.length <= 10) {
-          colors.push("#4caf50");
-        } else if (users.length >= 11) {
-          colors.push("#f44336");
-        }
-      }
-
       const monthUserList: any =
-        this.props.row !== null
-          ? Object.values(userList)[this.props.row]
-          : false;
+        rowFromRedux !== null ? Object.values(userList)[rowFromRedux] : false;
+
+      const selectedMonth: any =
+        rowFromRedux !== null ? Object.keys(userList)[rowFromRedux] : false;
+
+      Object.keys(userList).forEach((month: any, i) => {
+        const count: any = Object.values(userList)[i];
+        monthAndCount = [...monthAndCount, [month.slice(0, 3), count.length]];
+        slices[i] = { offset: 0.04 };
+      });
+
+      Object.values(userList).forEach((users: any) => {
+        if (users.length < 2) {
+          colors = [...colors, "#bdbdbd"];
+        } else if (users.length > 2 && users.length <= 6) {
+          colors = [...colors, "#3f51b5"];
+        } else if (users.length > 6 && users.length <= 10) {
+          colors = [...colors, "#4caf50"];
+        } else if (users.length >= 11) {
+          colors = [...colors, "#f44336"];
+        }
+      });
+
+      const chartOptions = {
+        title: "Yalantis Users",
+        titleTextStyle: {
+          fontSize: 22
+        },
+        fontName: "Ubuntu",
+        is3D: true,
+        pieSliceText: "label",
+        pieSliceTextStyle: {
+          fontSize: 14,
+          bold: true,
+          color: "#fff"
+        },
+        pieSliceBorderColor: "green",
+        legend: "none",
+        tooltip: {
+          text: "both"
+        },
+        colors,
+        chartArea: {
+          left: "5%",
+          top: 50,
+          width: "85%",
+          height: "85%"
+        },
+        slices
+      };
 
       return (
         <div className="home container-fluid">
@@ -91,33 +117,7 @@ class Home extends Component<IHomeProps, IHomeState> {
                   </div>
                 }
                 data={[["month", "users"]].concat(monthAndCount)}
-                options={{
-                  title: "Yalantis Users",
-                  titleTextStyle: {
-                    fontSize: 22
-                  },
-                  fontName: "Ubuntu",
-                  is3D: true,
-                  pieSliceText: "label",
-                  pieSliceTextStyle: {
-                    fontSize: 14,
-                    bold: true,
-                    color: "#fff"
-                  },
-                  pieSliceBorderColor: "green",
-                  legend: "none",
-                  tooltip: {
-                    text: "both"
-                  },
-                  colors,
-                  chartArea: {
-                    left: 0,
-                    top: 50,
-                    width: "100%",
-                    height: "100%"
-                  },
-                  slices
-                }}
+                options={chartOptions}
                 chartEvents={[
                   {
                     eventName: "ready",
@@ -128,14 +128,15 @@ class Home extends Component<IHomeProps, IHomeState> {
                         "onmouseover",
                         (e: any) => {
                           const { row } = e;
-                          this.props.getRowToDispatch(row);
+                          getRowToDispatch(row);
+                          chart.pfa[0].slices[row].offset = 0.2;
                         }
                       );
                       google.visualization.events.addListener(
                         chart,
                         "onmouseout",
                         (e: any) => {
-                          this.props.getRowToDispatch(null);
+                          getRowToDispatch(null);
                         }
                       );
                     }
@@ -144,15 +145,13 @@ class Home extends Component<IHomeProps, IHomeState> {
               />
             </div>
             <div className="col l4 s12 users-container">
-              {this.props.row !== null ? (
-                <h4 className="center">
-                  {Object.keys(userList)[this.props.row]}
-                </h4>
+              {rowFromRedux !== null ? (
+                <h4 className="center">{selectedMonth}</h4>
               ) : (
                 ""
               )}
 
-              {this.props.row !== null ? (
+              {rowFromRedux !== null ? (
                 <table className="centered">
                   <thead>
                     <tr>
@@ -197,14 +196,14 @@ class Home extends Component<IHomeProps, IHomeState> {
 
 const mapStateToPRops = (state: any) => {
   return {
-    row: state.getRowReducer.row
+    rowFromRedux: state.getRowReducer.rowFromRedux
   };
 };
 
 const mapDispatchToProps = (dispatch: Function) => {
   return {
-    getRowToDispatch: (row: number) => {
-      dispatch(getRowAtction(row));
+    getRowToDispatch: (rowFromRedux: number) => {
+      dispatch(getRowAtction(rowFromRedux));
     }
   };
 };

@@ -6,12 +6,12 @@ export interface IYalantisGetUsers {
 }
 
 export interface IHomeState {
-  error: null | string;
+  error: null | boolean;
   isLoaded: boolean;
   userList: object;
 }
 
 export interface IHomeProps {
-  row: null | number;
+  rowFromRedux: null | number;
   getRowToDispatch: Function;
 }

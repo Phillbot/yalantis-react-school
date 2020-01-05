@@ -1,6 +1,6 @@
-export default function getRowAtction(row: number) {
+export default function getRowAtction(rowFromRedux: number) {
   return {
     type: "ROW",
-    payload: row
+    payload: rowFromRedux
   };
 }
