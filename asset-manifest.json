@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/yalantis-react-school/static/css/main.890d3813.chunk.css",
-    "main.js": "/yalantis-react-school/static/js/main.717300fe.chunk.js",
-    "main.js.map": "/yalantis-react-school/static/js/main.717300fe.chunk.js.map",
+    "main.css": "/yalantis-react-school/static/css/main.013b5c1a.chunk.css",
+    "main.js": "/yalantis-react-school/static/js/main.e17f58af.chunk.js",
+    "main.js.map": "/yalantis-react-school/static/js/main.e17f58af.chunk.js.map",
     "runtime-main.js": "/yalantis-react-school/static/js/runtime-main.0673064b.js",
     "runtime-main.js.map": "/yalantis-react-school/static/js/runtime-main.0673064b.js.map",
     "static/css/2.e315d21c.chunk.css": "/yalantis-react-school/static/css/2.e315d21c.chunk.css",
     "static/js/2.16b4a241.chunk.js": "/yalantis-react-school/static/js/2.16b4a241.chunk.js",
     "static/js/2.16b4a241.chunk.js.map": "/yalantis-react-school/static/js/2.16b4a241.chunk.js.map",
     "index.html": "/yalantis-react-school/index.html",
-    "precache-manifest.0003fd47bd945b4169be6b82dfed020c.js": "/yalantis-react-school/precache-manifest.0003fd47bd945b4169be6b82dfed020c.js",
+    "precache-manifest.0e9e822605ca30e119a2c1cc064266ca.js": "/yalantis-react-school/precache-manifest.0e9e822605ca30e119a2c1cc064266ca.js",
     "service-worker.js": "/yalantis-react-school/service-worker.js",
     "static/css/2.e315d21c.chunk.css.map": "/yalantis-react-school/static/css/2.e315d21c.chunk.css.map",
-    "static/css/main.890d3813.chunk.css.map": "/yalantis-react-school/static/css/main.890d3813.chunk.css.map",
+    "static/css/main.013b5c1a.chunk.css.map": "/yalantis-react-school/static/css/main.013b5c1a.chunk.css.map",
     "static/js/2.16b4a241.chunk.js.LICENSE": "/yalantis-react-school/static/js/2.16b4a241.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.0673064b.js",
     "static/css/2.e315d21c.chunk.css",
     "static/js/2.16b4a241.chunk.js",
-    "static/css/main.890d3813.chunk.css",
-    "static/js/main.717300fe.chunk.js"
+    "static/css/main.013b5c1a.chunk.css",
+    "static/js/main.e17f58af.chunk.js"
   ]
 }
