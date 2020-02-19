@@ -54,7 +54,7 @@
     "@types/materialize-css": "^1.0.6",
     "gh-pages": "^2.1.1",
     "materialize-css": "^1.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react-materialize": "^3.4.1",
     "sass-loader": "^8.0.0"
   }

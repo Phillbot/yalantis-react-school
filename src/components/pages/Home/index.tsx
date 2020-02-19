@@ -129,7 +129,8 @@ class Home extends Component<IHomeProps, IHomeState> {
                         (e: any) => {
                           const { row } = e;
                           getRowToDispatch(row);
-                          chart.pfa[0].slices[row].offset = 0.2;
+
+                          chart.pea[0].slices[row].offset = 0.2;
                         }
                       );
                       google.visualization.events.addListener(
